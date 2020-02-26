@@ -1,10 +1,10 @@
-package backjoon;
+package Chapter1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class NO_2869 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String arr[] = br.readLine().split(" ");
@@ -13,23 +13,14 @@ public class Main {
 		int v = Integer.parseInt(arr[2]);
 		int cnt = 1;
 		int val = a - b;
-
 		v = v - a;
 		int su = v/val;
 
-		if(v - (val * su) <= 0) {
+		if(v - (val*su) <= 0) {
 			cnt = cnt + su;
 		}else {
 			cnt = cnt + su + 1;
 		}
 		System.out.println(cnt);
-
-//		int su1 = a;
-//		while(su1 < v) {
-//			su1 = su1 - b;
-//			su1 = su1 + a;
-//			cnt++;
-//		}
-//		System.out.println(cnt);
 	}
 }
