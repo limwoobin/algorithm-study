@@ -9,8 +9,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int cnt = Integer.parseInt(br.readLine());
-
-		for(int i=0; i<cnt; cnt++) {
+		for(int i=0; i<cnt; i++) {
 			String[] arr = br.readLine().split(" ");
 			int height = Integer.parseInt(arr[0]);
 			int width = Integer.parseInt(arr[1]);
@@ -18,33 +17,26 @@ public class Main {
 
 			String result = "";
 			int h = num / height;
-			if(h > 0 && (num % height) != 0) {
-				result = result.concat(Integer.toString(num % height));
-				if(h < 10) {
-					result = result.concat("0").concat(Integer.toString(h+1));
+			if(h > 0 && num != height) {
+				if(num % height == 0) {
+					result = result.concat(Integer.toString(height));
+					if(h < 10) {
+						result = result.concat("0").concat(Integer.toString(h));
+					}else {
+						result = result.concat(Integer.toString(h));
+					}
 				}else {
-					result = result.concat(Integer.toString(h+1));
+					result = result.concat(Integer.toString(num % height));
+					if(h < 10) {
+						result = result.concat("0").concat(Integer.toString(h+1));
+					}else {
+						result = result.concat(Integer.toString(h+1));
+					}
 				}
 			}else {
-				if(height > width) {
-					result = result.concat(Integer.toString(num)).concat("01");
-				}else {
-					
-				}
+				result = result.concat(Integer.toString(num)).concat("01");
 			}
 			System.out.println(result);
 		}
 	}
 }
-
-
-//6 12 10 = 402
-//30 50 72 = 1203
-//
-//5 7 8 = 302
-//
-//5 8 8 = 302
-//
-//5 9 8 = 302
-//
-//10 5 6 = 601
