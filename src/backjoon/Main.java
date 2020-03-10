@@ -1,42 +1,25 @@
 package backjoon;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner in = new Scanner(System.in);
 
-		int cnt = Integer.parseInt(br.readLine());
-		for(int i=0; i<cnt; i++) {
-			String[] arr = br.readLine().split(" ");
-			int height = Integer.parseInt(arr[0]);
-			int width = Integer.parseInt(arr[1]);
-			int num = Integer.parseInt(arr[2]);
+		int sum = 1;
+		int pV = 0;
 
-			String result = "";
-			int h = num / height;
-			if(h > 0 && num != height) {
-				if(num % height == 0) {
-					result = result.concat(Integer.toString(height));
-					if(h < 10) {
-						result = result.concat("0").concat(Integer.toString(h));
-					}else {
-						result = result.concat(Integer.toString(h));
-					}
-				}else {
-					result = result.concat(Integer.toString(num % height));
-					if(h < 10) {
-						result = result.concat("0").concat(Integer.toString(h+1));
-					}else {
-						result = result.concat(Integer.toString(h+1));
-					}
-				}
-			}else {
-				result = result.concat(Integer.toString(num)).concat("01");
+		int k = in.nextInt();
+		int n = in.nextInt();
+
+		for(int i=0; i<k; i++) {
+			for(int j=1; j<=n; j++) {
+				sum = sum * j;
 			}
-			System.out.println(result);
+			
 		}
+
+		System.out.println(sum);
 	}
 }

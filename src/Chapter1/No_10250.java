@@ -1,11 +1,10 @@
-package backjoon;
+package Chapter1;
 
-import java.io.IOException;
 import java.util.Scanner;
 
-public class test {
-	public static void main(String[] args) throws NumberFormatException, IOException {
+public class No_10250 {
 
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
         int cnt = sc.nextInt();
 
@@ -22,4 +21,5 @@ public class test {
             System.out.println(y*100+x);
         }
 	}
+
 }
