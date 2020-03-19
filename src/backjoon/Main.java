@@ -9,25 +9,44 @@ public class Main {
 
 		int num = in.nextInt();
 		int[] arr = new int[num];
-		int temp;
 		for(int i=0; i<num; i++) {
 			arr[i] = in.nextInt();
 		}
 
+		quickSort(arr , 0 , num-1);
+
 		for(int i=0; i<arr.length; i++) {
-			for(int j=0; j<arr.length-1-i; j++) {
-				if(arr[j] > arr[j+1]) {
-					temp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = temp;
-				}
+			System.out.println(arr[i]);
+		}
+	}
+
+	public static void quickSort(int[] arr , int start , int end) {
+		if(start >= end) {
+			return ;
+		}
+
+		int pivot = start;
+		int i = start + 1;
+		int j = end;
+		int temp;
+		while(i <= j) {
+			while(i <= end && arr[i] <= arr[pivot]) {
+				i++;
+			}
+			while(j > start && arr[j] >= arr[pivot]) {
+				j--;
+			}
+			if(i > j) {
+				temp = arr[j];
+				arr[j] = arr[pivot];
+				arr[pivot] = temp;
+			}else {
+				temp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = temp;
 			}
 		}
-
-
-
-		for(int i=0; i<arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
+		quickSort(arr , start , j-1);
+		quickSort(arr , j+1 , end);
 	}
 }
