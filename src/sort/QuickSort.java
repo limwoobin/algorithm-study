@@ -38,7 +38,7 @@ public class QuickSort {
 			while(j > start && arr[j] >= arr[pivot]) {
 				j--;
 			}
-			if(i > j) {
+			if(i > j) { // 엇갈렸을때 ..
 				temp = arr[j];
 				arr[j] = arr[pivot];
 				arr[pivot] = temp;
