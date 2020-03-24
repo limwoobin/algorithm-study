@@ -8,7 +8,7 @@ public class MergeSort {
 	public static int count = 0;
 
 	public static void main(String[] args) {
-		// nLogN
+		// O(N * logN)
 		int[] array = {7,6,2,8,3,5,4,1};
 		mergeSort(array , 0 , number -1);
 		for(int i=0; i<number; i++) {
