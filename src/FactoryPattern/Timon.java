@@ -15,5 +15,4 @@ public class Timon extends ShoppingMall{
 		}
 		return null;
 	}
-
 }
