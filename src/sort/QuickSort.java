@@ -49,8 +49,8 @@ public class QuickSort {
 			}
 		}
 
-		quickSort(arr , start , j-1);
-		quickSort(arr , j+1 , end);
+		quickSort(arr , start , j-1);	// 피벗보다 앞의 값들을 정렬
+		quickSort(arr , j+1 , end);		// 피벗보다 뒤의 갑들을 정렬
 	}
 }
 
