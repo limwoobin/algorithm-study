@@ -32,6 +32,7 @@ public class MergeSort {
 			}
 			k++;
 		}
+
 		// 남은 데이터도 삽입
 		if(i > middle) {
 			for(int t=j; t<=n; t++) {
