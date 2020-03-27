@@ -20,11 +20,11 @@ public class test {
 				System.out.println("VC");
 			}
 			System.out.println("RC:" + n);
-
+			n--;
 			recursive(n , "");
 			recursive(n , "a");
 			printNum(n);
-			n--;
+
 		}
 	}
 }
