@@ -54,6 +54,7 @@ public class MergeSort {
 
 	public static void mergeSort(int a[] , int m, int n) {
 		// 이외의 경우는 크기가 1개인 경우
+		System.out.println("m:" + m + ",n:" + n );
 		if(m < n) {
 			int middle = (m + n) / 2;
 			mergeSort(a,m,middle);
