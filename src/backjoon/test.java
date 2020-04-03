@@ -1,13 +1,14 @@
 package backjoon;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class test {
 	public static void main(String[] args) {
+		int i = 0;
+		do {
+			System.out.println(i);
+			i++;
+		}while(i<=10);
 
-
-//		Vector<Map<int ,String>> v = new Vector<Map<int ,String>>();
 
 	}
 }
