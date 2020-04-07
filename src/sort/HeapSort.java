@@ -6,6 +6,7 @@ public class HeapSort {
 		int number = 9;
 		int heap[] = {7,6,5,8,3,5,9,1,6};
 
+		// Heapify
 		for(int i=1; i<number; i++) {
 			int c = i;
 			do {
@@ -31,7 +32,7 @@ public class HeapSort {
 				if((c < i-1) && (heap[c] < heap[c+1])) {
 					c++;
 				}
-				// 루트보다 자식이 더 크다면 교
+				// 루트보다 자식이 더 크다면 교환
 				if(c<i && heap[root] < heap[c]) {
 					temp = heap[root];
 					heap[root] = heap[c];
