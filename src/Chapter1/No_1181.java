@@ -13,7 +13,7 @@ public class No_1181 {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
-		List<String> n = new ArrayList<String>(20010);
+		List<String> n = new ArrayList<String>(10000001);
 		for(int i=0; i<T; i++) {
 			String temp = br.readLine();
 			if(!n.contains(temp))
