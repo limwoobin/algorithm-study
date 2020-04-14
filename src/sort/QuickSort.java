@@ -3,25 +3,23 @@ package sort;
 public class QuickSort {
 	public static void main(String[] args) {
 		// 분할 정복 알고리즘
-		// 1.pivot 값 정하기(보통 첫번째 자리)
-		// 2.왼쪽에서 부터 pivot값 보다 큰 값을 선택
-		// 3.오른쪽에서부터 pivot값 보다 작은 값을 선택
-		// 4. 2번값과 3번값 교환
-		// 5. 엇갈린 경우는 pivot값과 작은값을 교환
-		// 6. 분할이 되었음
-		// 7. 각 분할이 된 배열의 맨 앞자리가 pivot
-		// 8. 앞에서 했더 작업 다시 수행
+		// Pivot 을 중심으로 L과 R값을 지정
+		// L은  Pivot 보다 큰 값 , R은   Pivot 보다 작은 값
+		// 두개 모두 선택되었다면 자리 교환
+		// 만약 한쪽이 선택된 L이나 R이 없으면 선택된 값과 Pivot 교환
 
 		int number = 10;
 		int[] arr = {3,7,8,1,5,9,6,10,2,4};
-		quickSort(arr , 0 , number-1);
+		QuickSort qs = new QuickSort();
+//		qs.quickSort(arr , 0 , number-1);
+		qs.sort(arr, 0, number-1);
 		for(int i=0; i<number; i++) {
 			System.out.print(arr[i] + " ");
 		}
 	}
 
 
-	public static void quickSort(int[] arr , int start, int end) {
+	public void quickSort(int[] arr , int start, int end) {
 		if(start >= end) { // 원소가 1개인 경우
 			return;
 		}
@@ -51,6 +49,26 @@ public class QuickSort {
 
 		quickSort(arr , start , j-1);	// 피벗보다 앞의 값들을 정렬
 		quickSort(arr , j+1 , end);		// 피벗보다 뒤의 갑들을 정렬
+	}
+
+	public void sort(int[] data , int l , int r) {
+		int left = l;
+		int right = r;
+		int pivot = data[(l+r) / 2];
+
+		do {
+			while(data[left] < pivot) left++;
+			while(data[right] > pivot) right--;
+			if(left <= right) {
+				int temp = data[left];
+				data[left] = data[right];
+				data[right] = temp;
+				left++;
+				right--;
+			}
+		}while(left <= right);
+		if(l < right) sort(data , l , right);
+		if(r > left) sort(data , left , r);
 	}
 }
 
