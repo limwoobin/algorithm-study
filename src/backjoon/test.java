@@ -1,32 +1,45 @@
 package backjoon;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
 public class test {
 	public static void main(String[] args) throws IOException {
-		int a[] = new int[10001];
+		test t = new test();
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int t = Integer.parseInt(br.readLine());
+		int[] arr = {3,1,8,7,2,5,4,6};
+		int number = arr.length;
+		int start = 0;
 
-		for(int i=0; i<t; i++) {
-			a[Integer.parseInt(br.readLine())]++;
+		t.sort(arr , start , number-1);
+		for(int i=0; i<number; i++) {
+			System.out.print(arr[i] + " ");
 		}
+	}
 
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		for(int i=0; i<10001; i++) {
-			while(a[i] != 0) {
-				bw.write(Integer.toString(i) + "\n");
-				a[i]--;
+	public void sort(int[] data , int l , int r) {
+		for(int i=0; i<data.length; i++) {
+			System.out.print(data[i] + " ");
+		}
+		System.out.println();
+
+		int left = l;
+		int right = r;
+		int pivot = data[(l+r) / 2];
+
+		do {
+			while(data[left] < pivot) left++;
+			while(data[right] > pivot) right--;
+			if(left <= right) {
+				int temp = data[left];
+				data[left] = data[right];
+				data[right] = temp;
+				left++;
+				right--;
 			}
-		}
-		br.close();
-		bw.close();
+		}while(left <= right);
+		System.out.println("l:" + l);
+		System.out.println("r:" + r);
+		if(l < right) sort(data , l ,right);
+		if(r > left) sort(data , left , r);
 	}
 }
-
-
