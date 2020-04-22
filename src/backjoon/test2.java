@@ -13,8 +13,8 @@ public class test2 {
 	public void quickSort(int data[] , int l , int r) {
 		int left = l;
 		int right = r;
-//		int pivot = data[(l + r) / 2];
-		int pivot = data[3];
+		int pivot = data[(l + r) / 2];
+//		int pivot = data[l];
 
 		do {
 			while(data[left] < pivot) left++;
