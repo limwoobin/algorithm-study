@@ -2,8 +2,8 @@ package backjoon;
 
 public class test2 {
 	public static void main(String[] args) {
+		int arr[] = {2,1,3,6,8,7,5,4};
 		test2 t2 = new test2();
-		int[] arr = {3,1,5,7,6,8,2,4};
 		t2.quickSort(arr , 0 , arr.length-1);
 		for(int i=0; i<arr.length; i++) {
 			System.out.print(arr[i] + " ");
@@ -13,8 +13,7 @@ public class test2 {
 	public void quickSort(int data[] , int l , int r) {
 		int left = l;
 		int right = r;
-		int pivot = data[(l + r) / 2];
-//		int pivot = data[l];
+		int pivot = data[(l+r) / 2];
 
 		do {
 			while(data[left] < pivot) left++;
@@ -26,7 +25,7 @@ public class test2 {
 				left++;
 				right--;
 			}
-		}while(left <= right);
+		}while(left <= right); // 엇갈릴때까지
 		if(l < right) quickSort(data , l , right);
 		if(r > left) quickSort(data , left , r);
 	}
