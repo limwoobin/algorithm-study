@@ -13,20 +13,20 @@ public class test2 {
 	public void quickSort(int data[] , int l , int r) {
 		int left = l;
 		int right = r;
-		int pivot = data[(l+r) / 2];
+		int pivot = data[(l+r) /2];
 
 		do {
 			while(data[left] < pivot) left++;
 			while(data[right] > pivot) right--;
 			if(left <= right) {
-				int temp = data[left];
-				data[left] = data[right];
-				data[right] = temp;
+				int temp = data[right];
+				data[right] = data[left];
+				data[left] = temp;
 				left++;
 				right--;
 			}
-		}while(left <= right); // 엇갈릴때까지
-		if(l < right) quickSort(data , l , right);
-		if(r > left) quickSort(data , left , r);
+		}while(left <= right);
+		if(l < right) quickSort(data, l, right);
+		if(r > left) quickSort(data, left, r);
 	}
 }
