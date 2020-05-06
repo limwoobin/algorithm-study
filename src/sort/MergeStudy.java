@@ -17,6 +17,7 @@ public class MergeStudy {
 		int j = middle + 1;	// 두 번째 부분집합의 시작 위치 설정
 		int k = m;	// 배열 sorted에 정렬된 원소를 저장할 위치 설정
 
+		// 작은 순서대로 배열에 삽입
 		while(i <= middle && j <= n) {
 			if(arr[i] <= arr[j]) {
 				sorted[k] = arr[i];
