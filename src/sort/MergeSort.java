@@ -3,9 +3,7 @@ package sort;
 public class MergeSort {
 
 	public static int number = 8;
-	public static int size = 0;
 	public static int[] sorted = new int[8];
-	public static int count = 0;
 
 	public static void main(String[] args) {
 		// O(N * logN)
