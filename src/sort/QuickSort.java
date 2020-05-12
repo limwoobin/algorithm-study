@@ -33,6 +33,7 @@ public class QuickSort {
 				right--;
 			}
 		}while(left <= right);
+
 		if(l < right) sort(data , l , right);
 		if(r > left) sort(data , left , r);
 	}
@@ -40,3 +41,5 @@ public class QuickSort {
 
 // 시간복잡도 -> O(N*logN)
 // 최악의 복잡도는 O(N^2)
+// 하지만 일반적으로 퀵소트가 머지 , 힙 소트보다 더 빠르다
+// 이유는 스왑비용이 적고 지역적 특성이 있기 때문

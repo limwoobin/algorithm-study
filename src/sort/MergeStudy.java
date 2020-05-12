@@ -7,7 +7,7 @@ public class MergeStudy {
 		int arr[] = {2,3,1,5,6,4,7,8};
 		ms.mergeSort(arr , 0 , arr.length-1);
 
-		for(int i=0; i<sorted.length; i++) {
+		for(int i=0; i<sorted.length; i++){
 			System.out.print(sorted[i] + " ");
 		}
 	}
