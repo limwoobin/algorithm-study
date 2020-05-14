@@ -1,14 +1,13 @@
 package backjoon;
 
 public class test3 {
-	static int sorted[] = new int[8];
-
+	static int sorted[] = new int[10];
 	public static void main(String[] args) {
 		test3 t3 = new test3();
-		int arr[] = {6,4,2,3,1,5,7,8};
-
+		int arr[] = {3,5,2,4,9,7,6,8,1,10};
 		t3.mergeSort(arr , 0 , arr.length-1);
-		for(int i=0; i<sorted.length; i++){
+
+		for(int i=0; i<arr.length; i++){
 			System.out.print(sorted[i] + " ");
 		}
 	}
@@ -35,7 +34,7 @@ public class test3 {
 				k++;
 			}
 		}else{
-			for(int t=m; t<=middle; t++){
+			for(int t=i; t<=middle; t++){
 				sorted[k] = arr[t];
 				k++;
 			}
@@ -44,14 +43,14 @@ public class test3 {
 		for(int t=m; t<=n; t++){
 			arr[t] = sorted[t];
 		}
+
 	}
 
 	public void mergeSort(int arr[] , int m , int n){
-		int middle;
 		if(m < n){
-			middle = (m+n) / 2;
+			int middle = (m + n) / 2;
 			mergeSort(arr , m , middle);
-			mergeSort(arr , middle + 1 , n);
+			mergeSort(arr , middle+1 , n);
 			merge(arr , m , middle , n);
 		}
 	}
