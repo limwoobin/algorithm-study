@@ -6,13 +6,12 @@ import java.io.InputStreamReader;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
+		TestVO testVO = new TestVO();
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		testVO.setName("AA");
+		testVO.setNumber((long) 15351546);
+		testVO.setPhone("01012341234");
 
-		int i = Integer.parseInt(br.readLine());
-		System.out.println("i:" + i);
-
-		int j = br.read();
-		System.out.println("j:" + j);
+		System.out.println(testVO.toString());
 	}
 }

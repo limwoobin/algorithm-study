@@ -60,6 +60,6 @@ public class BFS {
         bfs.addEdge(2, 0);
         bfs.addEdge(2, 3);
         bfs.addEdge(3, 3);
-        bfs.BFS(2);
+        bfs.BFS(0);
     }
 }
