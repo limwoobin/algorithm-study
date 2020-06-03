@@ -32,7 +32,7 @@ public class DFS {
             int n = i.next();
             // 방문하지 않은 노드면 해당 노드를 시작 노드로 다시 DFSUtil 호출
             if(!visited[n]){
-                DFSUtil(n , visited); // 순환 호
+                DFSUtil(n , visited); // 순환 호출
             }
         }
     }
