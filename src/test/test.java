@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class test {
 
 
-	public static void main(String[] args) {
+	public static void main(String[] asd) {
 		LocalDateTime start = LocalDate.now().atStartOfDay();
 		LocalDateTime end = start.plusDays(1);
 
