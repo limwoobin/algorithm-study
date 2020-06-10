@@ -7,5 +7,5 @@ public enum Week {
     THURSDAY,
     FRIDAY,
     SATURDAY,
-    SUNDAY
+    SUNDAY;
 }
