@@ -5,6 +5,7 @@ public class TestVO {
     private String name;
     private String phone;
     private Long number;
+    private boolean agree;
 
     public String getName() {
         return name;
@@ -30,13 +31,12 @@ public class TestVO {
         this.number = number;
     }
 
-    @Override
-    public String toString() {
-        return "TestVO{" +
-                "name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", number=" + number +
-                '}';
+    public boolean getAgree() {
+        return agree;
+    }
+
+    public void setAgree(boolean agree) {
+        this.agree = agree;
     }
 }
 
