@@ -3,19 +3,15 @@ package BuilderPattern;
 public class TestVO {
 
     private String name;
-
     private TCode tCode;
-
     private int tNum;
 
     public String getName() {
         return this.name;
     }
-
     public TCode getTCode() {
         return this.tCode;
     }
-
     public int getTNum() {
         return this.tNum;
     }
@@ -31,17 +27,17 @@ public class TestVO {
         private TCode tCode;
         private int tNum;
 
-        public Builder withName(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
 
-        public Builder withTCode(TCode tCode) {
+        public Builder TCode(TCode tCode) {
             this.tCode = tCode;
             return this;
         }
 
-        public Builder withTNum(int tNum) {
+        public Builder TNum(int tNum) {
             this.tNum = tNum;
             return this;
         }

@@ -3,9 +3,9 @@ package BuilderPattern;
 public class test {
 	public static void main(String[] args) {
 		TestVO testVO = new TestVO.Builder()
-									.withName("TEST")
-									.withTCode(TCode.TC)
-									.withTNum(50)
+									.name("TEST")
+									.TCode(TCode.TC)
+									.TNum(50)
 									.build();
 
 		System.out.println(testVO.getName());
