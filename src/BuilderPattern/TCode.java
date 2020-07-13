@@ -1,4 +1,4 @@
-package test;
+package BuilderPattern;
 
 public enum TCode {
     TC,
