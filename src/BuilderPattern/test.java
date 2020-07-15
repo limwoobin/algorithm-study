@@ -11,5 +11,6 @@ public class test {
 		System.out.println(testVO.getName());
 		System.out.println(testVO.getTCode());
 		System.out.println(testVO.getTNum());
+
 	}
 }
