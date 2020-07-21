@@ -14,3 +14,6 @@ public class No_9498 {
         else System.out.println("F");
     }
 }
+
+
+
